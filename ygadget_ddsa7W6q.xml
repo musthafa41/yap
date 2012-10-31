@@ -52,7 +52,8 @@
     </Content>
     
     <!-- The content of this section will render in Canvas View. -->
-    <Content type="html" view="YahooFullView, canvas" href="">
+    <Content type="html" view="YahooFullView, canvas">
+     <h1>This is my Full view!</h1>
     </Content>
         
     <!-- The content of this CDATA will render if no other content sections are applicable. -->
