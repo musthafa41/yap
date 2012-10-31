@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module xmlns:yap="http://www.yahoo.com/ns/yap">
+<?xml version="1.0" encoding="UTF-8"?> 
+<Module xmlns:yap="http://www.yahoo.com/ns/yap"> 
 <!--
     Sample Gadget XML Template. Created by Yahoo! on 2/18/10.
     Copyright Yahoo! Inc. 2010. All rights reserved.
@@ -8,145 +8,70 @@
     After you edit this template, host the file at a location accessible via
     a URL. Import the hosted file into your project to update your development
     Gadget. You need to do this whenever you make changes to your hosted file.
-
+ 
     IMPORTANT DOCUMENTATION:
     Read Yahoo!'s requirements for ModulePrefs elements and attributes at:
     http://developer.yahoo.com/yap/guide/gadgets-xml-config.html 
--->
+--> 
     <!-- ModulePrefs
          Required for Push Live: @title
          Required for Publish: ModulePrefs@description,
                                ModulePrefs@category,
                                ModulePrefs/Icon,
+<<<<<<< HEAD
                                ModulePrefs/Locale -->
     <ModulePrefs title="Hello World"
                  description="My First Yap App"
                  category="Entertainment"
+                 author="Y!"
                  category2="">
                  <Icon></Icon> <!-- Favicon URL, 16x16, Will be converted to .gif for use on Yahoo.com homepage -->        
         <Locale lang="en" country="us"/> <!-- Supported languages -->
 
+=======
+                               ModulePrefs/Locale --> 
+    <ModulePrefs title="App Resize Test Suite" description="App Resize Test Suite" category="Entertainment" category2=""> 
+                 <Icon>http://l.yimg.com/cy/whoknew-yap/uploads/whoknew-icon-16x16.png</Icon> <!-- Favicon URL, 16x16, Will be converted to .gif for use on Yahoo.com homepage -->        
+        <Locale lang="en" country="us"/> <!-- Supported languages --> 
+     	<Require feature="opensocial"/>
+		<Require feature="views"/>
+>>>>>>> b0b3b4bf16d2a2106ad360209425e43cd79368ac
         <!-- Yahoo! Extensions
              Required Extensions for Push Live: NONE
              Required Extensions for Publish: yap.gadgets.ShortDescription,
                                               yap.gadgets.ApplicationIconUrl,
                                               yap.gadgets.YahooComIconUrl,
                                               yap.gadgets.ScreenshotUrl
-                                              -->
-        <yap:Extension name="yap.gadgets.ShortDescription"></yap:Extension> <!-- Shorter description. Max: 128 chars -->
-        <yap:Extension name="yap.gadgets.ApplicationIconUrl"></yap:Extension> <!-- Application Icon, 64x64 -->
-        <yap:Extension name="yap.gadgets.YahooComIconUrl"></yap:Extension> <!-- Icon to be displayed at Yahoo.com, 20x20, .gif
+                                              --> 
+        <yap:Extension name="yap.gadgets.ShortDescription">App Resize Test Suite</yap:Extension> <!-- Shorter description. Max: 128 chars --> 
+        <yap:Extension name="yap.gadgets.ApplicationIconUrl">http://l.yimg.com/cy/whoknew-yap/uploads/whoknew-icon-64x64.png</yap:Extension> <!-- Application Icon, 64x64 --> 
+        <yap:Extension name="yap.gadgets.YahooComIconUrl">http://l.yimg.com/cy/whoknew-yap/uploads/whoknew-icon-20x20.gif</yap:Extension> <!-- Icon to be displayed at Yahoo.com, 20x20, .gif
                                                                                 DEPRECATED: This extension is no longer used
-                                                                                            by Yahoo.com -->
-        <yap:Extension name="yap.gadgets.ScreenshotUrl"></yap:Extension> <!-- -Screenshot preview image, 300x250 -->
-        <yap:Extension name="yap.gadgets.CreatorImageUrl"></yap:Extension> <!-- Your company logo, 256x256 -->
-        <yap:Extension name="yap.gadgets.CreatorWebsiteUrl"></yap:Extension> <!-- Your website -->
-        <yap:Extension name="yap.gadgets.TouUrl"></yap:Extension> <!-- Your terms of use -->
-        <yap:Extension name="yap.gadgets.PrivacyUrl"></yap:Extension> <!-- Your privacy policy -->
-        <yap:Extension name="yap.gadgets.Tags"></yap:Extension> <!-- Tags, comma separated -->
-    </ModulePrefs>
+                                                                                            by Yahoo.com --> 
+        <yap:Extension name="yap.gadgets.ScreenshotUrl">http://l.yimg.com/cy/whoknew-yap/uploads/whoknew-icon-300x250.gif</yap:Extension> <!-- -Screenshot preview image, 300x250 --> 
+        <yap:Extension name="yap.gadgets.CreatorImageUrl"/> <!-- Your company logo, 256x256 --> 
+        <yap:Extension name="yap.gadgets.CreatorWebsiteUrl"/> <!-- Your website --> 
+        <yap:Extension name="yap.gadgets.TouUrl"/> <!-- Your terms of use --> 
+        <yap:Extension name="yap.gadgets.PrivacyUrl"/> <!-- Your privacy policy --> 
+        <yap:Extension name="yap.gadgets.Tags"/> <!-- Tags, comma separated --> 
+    </ModulePrefs> 
     
-    <!-- The content of this CDATA will render in Yahoo Small View. -->
-    <Content type="html" view="YahooSmallView, default">
-        <h1>This is my small view!</h1>
-    </Content>
+    <!-- The content of this CDATA will render in Yahoo Small View. --> 
+    <Content type="html" view="YahooSmallView, default"> 
+       <![CDATA[App Resize Test Suite]]>
+    </Content> 
     
-    <!-- The content of this section will render in Canvas View. -->
-    <Content type="html" view="YahooFullView, canvas" href="URL_TO_YAHOO_CANVAS_VIEW">
-    </Content>
+    <!-- The content of this section will render in Canvas View. --> 
+    <Content type="html" view="YahooFullView, canvas" href=""></Content>
         
-    <!-- The content of this CDATA will render if no other content sections are applicable. -->
-    <Content type="html">
-        <![CDATA[
-            Hello World, my name is <yml:name uid="viewer" linked="true" capitalize="true"/>.    
-        ]]>
-    </Content>
+    <!-- The content of this CDATA will render if no other content sections are applicable. --> 
+    <Content type="html"> 
+       <![CDATA[
 
-    <!-- For Apps of the category Entertainment-Games, uncomment Category and it's sub-nodes. -->
-    <!-- This is only indicative. For latest spec and description of the elements, please see http://developer.yahoo.com/yap/guide/gadgets-xml-config.html -->
-    <!-- Mandatory nodes have been kept in the beginning. Optional nodes are marked explicitly. -->
-    <!-- Category name="Entertainment-Games" -->
-        <!-- Game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/to/xsd" -->
-            <!-- Hidden>false</Hidden --> <!-- Indicates 'live' status of App. -->
-            <!-- Delete>false</Delete --> <!-- Whether this game is to be deleted -->
-            <!-- AppId>abcd1234</AppId --> <!-- Your App Id should go here -->
-            <!-- TypeOfGame>download</TypeOfGame --> <!-- Can be one of download, flash, yap, redirect -->
-            <!-- DisplayName>Sample Game</DisplayName --> <!-- Your Game display name -->
-            <!-- EntityType>game</EntityType --> <!-- Keep this as 'game' -->
-            <!-- IdentityFacet>true</IdentityFacet --> <!-- Keep this as true -->
-            <!-- MinPlayer>1</MinPlayer --> <!-- Min number of players required to play this game -->
-            <!-- MaxPlayer>1</MaxPlayer --> <!-- Max number of players required to play this game -->
-            <!-- ScreenShotList>
-               <Image>
-                  <URL>http://path/to/screenshot.jpg</URL>
-                  <Description>Describe your screenshot</Description>
-               </Image>
-            </ScreenShotList --> <!-- Screenshots associated with the game -->
-            <!-- PlayURL>http://path/to/playurl</PlayURL --> <!-- Optional -->
-            <!-- ModuleURL>http://path/to/moduleurl</ModuleURL --> <!-- Optional -->
-            <!-- SpaceID>123456789</SpaceID --> <!-- Optional -->
-            <!-- EnableViewAd>false</EnableViewAd --> <!-- Optional -->
-            <!-- SponsoredURL>http://path/to/sponsoredurl</SponsoredURL --> <!-- Optional -->
-            <!-- Properties>
-               <Property>
-                  <Key></Key>
-                  <Value></Value>
-               </Property>
-               <Property>
-                  <Key></Key>
-                  <Value></Value>
-               </Property>
-            </Properties --> <!-- Optional, Any set of properties you want to set for the Game -->
-            <!-- Logo>
-                <Image>
-                  <URL>http://path/to/logo.jpg</URL>
-                  <Description>Describe your logo</Description>
-                </Image>
-            </Logo --> <!-- Optional, logo associated with your Game -->
-            <!-- CoverImage>
-                <Image>
-                  <URL>http://path/to/coverimage.jpg</URL>
-                  <Description>Describe your cover image</Description>
-                </Image>
-            </CoverImage --> <!-- Optional, cover image associated with your Game -->
-            <!-- Features>
-               <Feature>feature 1</Feature>
-               <Feature>feature 2</Feature>
-            </Features --> <!-- Optional, features of your game -->           
-            <!-- Tags>
-               <Tag>tag1</Tag>
-               <Tag>tag2</Tag>
-               <Tag>tag3</Tag>
-            </Tags --> <!-- Optional, tags associated with your game -->
-            <!-- AssetURL>http://path/to/game/resource</AssetURL --> <!-- Optional, asset url associated with the game for e.g this could be the url of the flash file if the game type is flash -->
-            <!-- AssetSize/ --> <!-- Optional, size of the asset -->
-            <!-- AssetDescription/ --> <!-- Optional -->
-            <!-- AssetProperties>
-               <Property>
-                  <Key></Key>
-                  <Value></Value>
-               </Property>
-            </AssetProperties --> <!-- Optional, additional properties if any developer want to add -->
-            <!-- AssetPlatform>PC</AssetPlatform --> <!-- Optional , Platform required for the download game -->
-            <!-- AssetOS>XP/VISTA</AssetOS --> <!-- Optional, OS required for the download game -->
-            <!-- AssetMinCPUSpeed>0.5 GHz</AssetMinCPUSpeed --> <!-- Optional, Min CPU Speed required for the download game  -->
-            <!-- AssetRam>128 MB</AssetRam --> <!-- Optional, Min Ram required for the download game -->
-            <!-- See documentation for other optional Asset params -->
-            <!-- MinPluginVersion/ --> <!-- Optional, Min Flash version required for the flash game -->
-            <!-- Price>999.99</Price --> <!-- Optional, Price for the download game -->
-            <!-- Currency>USD</Currency --> <!-- Optional, Currency in which download game is charged -->
-            <!-- DiscountPercentage/ --> <!-- Optional -->
-            <!-- DiscountValidFrom/ --> <!-- Optional, start date of the game when it is valid -->
-            <!-- DiscountValidUntil/ --> <!-- Optional, end date of the game when it is valid -->
-            <!-- Provider>
-                <ProviderUuid>ProviderId0</ProviderUuid>
-                <ProviderYId>provider@yahoo.com</ProviderYId>
-            </Provider --> <!-- Optional, Information about provider of the Game -->
-            <!-- RelatedGames>
-               <RelatedGame>game1</RelatedGame>
-               <RelatedGame>game2</RelatedGame>
-            </RelatedGames --> <!-- Optional related games -->
-        <!-- /Game -->  
-   <!-- /Category -->
+       <h3>Hello World! </h3>
+
+       ]>
+    </Content> 
     
 </Module>
+<!-- ws1.mlk.mud.yahoo.com compressed/chunked Wed Oct 31 02:48:44 PDT 2012 -->
