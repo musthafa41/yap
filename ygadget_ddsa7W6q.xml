@@ -58,7 +58,7 @@
     <!-- The content of this CDATA will render if no other content sections are applicable. -->
     <Content type="html">
         <![CDATA[
-            Hello World, my name is <yml:name uid="viewer" linked="true" capitalize="true"/>.    
+            Hello World,
         ]]>
     </Content>
 
