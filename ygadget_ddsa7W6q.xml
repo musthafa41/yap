@@ -19,12 +19,16 @@
                                ModulePrefs@category,
                                ModulePrefs/Icon,
                                ModulePrefs/Locale -->
-    <ModulePrefs title="Hello World"
-                 description="My first YAP application"
+    <ModulePrefs title="Clash of the Dragons"
+                 description="Clash of the Dragons is a free MMO CCG. Build a powerful deck, and battle against the evil that has taken over West Kruna. Open booster packs to find rare and legendary cards that will defeat any challenger. Join forces with other players and defeat mighty enemies."
                  category="Entertainment"
                  category2="">
-                 <Icon></Icon> <!-- Favicon URL, 16x16, Will be converted to .gif for use on Yahoo.com homepage -->        
-        <Locale lang="en" country="us"/> <!-- Supported languages -->
+                 <Icon>http://cds.c5p7c8s3.hwcdn.net/COD_orb_16x16.jpg</Icon> <!-- Favicon URL, 16x16, Will be converted to .gif for use on Yahoo.com homepage -->        
+        <Locale lang="en" /> <!-- Supported languages -->
+        <Locale lang="fr" />
+        <Locale lang="it" />
+        <Locale lang="de" />
+        <Locale lang="es" />
 
         <!-- Yahoo! Extensions
              Required Extensions for Push Live: NONE
@@ -33,27 +37,26 @@
                                               yap.gadgets.YahooComIconUrl,
                                               yap.gadgets.ScreenshotUrl
                                               -->
-        <yap:Extension name="yap.gadgets.ShortDescription"></yap:Extension> <!-- Shorter description. Max: 128 chars -->
-        <yap:Extension name="yap.gadgets.ApplicationIconUrl"></yap:Extension> <!-- Application Icon, 64x64 -->
-        <yap:Extension name="yap.gadgets.YahooComIconUrl"></yap:Extension> <!-- Icon to be displayed at Yahoo.com, 20x20, .gif
+        <yap:Extension name="yap.gadgets.ShortDescription">Build a deck full of mighty heroes, powerful sorcery, and deadly weapons.</yap:Extension> <!-- Shorter description. Max: 128 chars -->
+        <yap:Extension name="yap.gadgets.ApplicationIconUrl">http://cds.c5p7c8s3.hwcdn.net/COD_64x64.jpg</yap:Extension> <!-- Application Icon, 64x64 -->
+        <yap:Extension name="yap.gadgets.YahooComIconUrl">http://cds.c5p7c8s3.hwcdn.net/COD_orb_20x20.gif</yap:Extension> <!-- Icon to be displayed at Yahoo.com, 20x20, .gif
                                                                                 DEPRECATED: This extension is no longer used
                                                                                             by Yahoo.com -->
-        <yap:Extension name="yap.gadgets.ScreenshotUrl"></yap:Extension> <!-- -Screenshot preview image, 300x250 -->
+        <yap:Extension name="yap.gadgets.ScreenshotUrl">http://cds.c5p7c8s3.hwcdn.net/COD_300x250.jpg</yap:Extension> <!-- -Screenshot preview image, 300x250 -->
         <yap:Extension name="yap.gadgets.CreatorImageUrl"></yap:Extension> <!-- Your company logo, 256x256 -->
-        <yap:Extension name="yap.gadgets.CreatorWebsiteUrl"></yap:Extension> <!-- Your website -->
-        <yap:Extension name="yap.gadgets.TouUrl"></yap:Extension> <!-- Your terms of use -->
-        <yap:Extension name="yap.gadgets.PrivacyUrl"></yap:Extension> <!-- Your privacy policy -->
+        <yap:Extension name="yap.gadgets.CreatorWebsiteUrl">https://www.kabam.com</yap:Extension> <!-- Your website -->
+        <yap:Extension name="yap.gadgets.TouUrl">https://www.kabam.com/corporate/terms-of-service</yap:Extension> <!-- Your terms of use -->
+        <yap:Extension name="yap.gadgets.PrivacyUrl">https://www.kabam.com/corporate/privacy-policy</yap:Extension> <!-- Your privacy policy -->
         <yap:Extension name="yap.gadgets.Tags"></yap:Extension> <!-- Tags, comma separated -->
     </ModulePrefs>
     
     <!-- The content of this CDATA will render in Yahoo Small View. -->
     <Content type="html" view="YahooSmallView, default">
-        <h1>This is my small view!</h1>
+        <h1>Clash of the Dragons</h1>
     </Content>
     
     <!-- The content of this section will render in Canvas View. -->
-    <Content type="html" view="YahooFullView, canvas">
-        <h1> Hello World, This is my Full view.</h1>
+    <Content type="html" view="YahooFullView, canvas" href="https://www.kabam.com/clash-of-the-dragons/playex/yahoo">
     </Content>
         
     <!-- The content of this CDATA will render if no other content sections are applicable. -->
@@ -66,17 +69,17 @@
     <!-- For Apps of the category Entertainment-Games, uncomment Category and it's sub-nodes. -->
     <!-- This is only indicative. For latest spec and description of the elements, please see http://developer.yahoo.com/yap/guide/gadgets-xml-config.html -->
     <!-- Mandatory nodes have been kept in the beginning. Optional nodes are marked explicitly. -->
-    <!-- Category name="Entertainment-Games" -->
-        <!-- Game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/to/xsd" -->
-            <!-- Hidden>false</Hidden --> <!-- Indicates 'live' status of App. -->
-            <!-- Delete>false</Delete --> <!-- Whether this game is to be deleted -->
-            <!-- AppId>abcd1234</AppId --> <!-- Your App Id should go here -->
-            <!-- TypeOfGame>download</TypeOfGame --> <!-- Can be one of download, flash, yap, redirect -->
-            <!-- DisplayName>Sample Game</DisplayName --> <!-- Your Game display name -->
-            <!-- EntityType>game</EntityType --> <!-- Keep this as 'game' -->
-            <!-- IdentityFacet>true</IdentityFacet --> <!-- Keep this as true -->
-            <!-- MinPlayer>1</MinPlayer --> <!-- Min number of players required to play this game -->
-            <!-- MaxPlayer>1</MaxPlayer --> <!-- Max number of players required to play this game -->
+    <!--Category name="Entertainment-Games" -->
+        <!--Game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/to/xsd" -->
+            <!--Hidden>false</Hidden --> <!-- Indicates 'live' status of App. -->
+            <!--Delete>false</Delete --> <!-- Whether this game is to be deleted -->
+            <!--AppId>33h0lv7g</AppId --> <!-- Your App Id should go here -->
+            <!--TypeOfGame>yap</TypeOfGame --> <!-- Can be one of download, flash, yap, redirect -->
+            <!--DisplayName>Clash of the Dragons</DisplayName --> <!-- Your Game display name -->
+            <!--EntityType>game</EntityType --> <!-- Keep this as 'game' -->
+            <!--IdentityFacet>true</IdentityFacet --> <!-- Keep this as true -->
+            <!--MinPlayer>1</MinPlayer --> <!-- Min number of players required to play this game -->
+            <!--MaxPlayer>1</MaxPlayer --> <!-- Max number of players required to play this game -->
             <!-- ScreenShotList>
                <Image>
                   <URL>http://path/to/screenshot.jpg</URL>
@@ -147,7 +150,7 @@
                <RelatedGame>game1</RelatedGame>
                <RelatedGame>game2</RelatedGame>
             </RelatedGames --> <!-- Optional related games -->
-        <!-- /Game -->  
+        <!-- /Game -->
    <!-- /Category -->
     
 </Module>
