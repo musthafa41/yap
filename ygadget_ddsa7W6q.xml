@@ -56,7 +56,7 @@
     </Content>
     
     <!-- The content of this section will render in Canvas View. -->
-    <Content type="html" view="YahooFullView, canvas" href="https://www-beta-dn.kabam.com/edgeworld/playex/yahoo/game/1003">
+    <Content type="html" view="YahooFullView, canvas" href="https://raw.github.com/musthafa41/yap/master/kabam.html">
     </Content>
         
     <!-- The content of this CDATA will render if no other content sections are applicable. -->
